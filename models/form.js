@@ -1,5 +1,5 @@
 const mongoose = require("../db/mongoose");
-const { Schema, model }  = mongoose;
+const Schema = mongoose.Schema;
 
 const formSchema = new Schema({
     firstName: {
@@ -24,6 +24,6 @@ const formSchema = new Schema({
     timestamps: true
 })
 
-const Form = model("Form", formSchema);
+const Form = mongoose.model('Form', formSchema);
 
 module.exports = Form;
