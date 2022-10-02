@@ -2,11 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const formSchema = new Schema({
-    firstName: {
-        type: String,
-        required: true
-    },
-    lastName: {
+    fullName: {
         type: String,
         required: true
     },
@@ -15,11 +11,11 @@ const formSchema = new Schema({
         required: true,
         unique: true
     },
-    phone: {
+    message: {
         type: String,
-        required: true,
-    }
-
+        required: true
+    },
+    
 }, {
     timestamps: true
 })
